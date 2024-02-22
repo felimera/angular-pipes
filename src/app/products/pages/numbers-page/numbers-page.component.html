@@ -1,1 +1,41 @@
-<p>numbers-page works!</p>
+<p-panel header="Pipes númericos" class="p-1">
+  <p> Pipes incluidos en Angular - Usualmente en el Common Module. </p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Netas" subheader="del presente año">
+      <ul>
+        <li>{{totalSells+1234}}</li>
+        <li>{{totalSells+1234|number}}</li>
+        <li>{{totalSells+1234|number:'1.2-2'}}</li>
+        <li>{{totalSells+1234|number:'1.6-6'}}</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Brutas" subheader="del presente año">
+      <ul>
+        <li>{{totalSells}}</li>
+        <li>{{totalSells|currency}}</li>
+        <li>{{totalSells|currency:'CAD '}}</li>
+        <li>{{totalSells|currency:'L'}}</li>
+        <li>{{totalSells|currency:'COP'}}</li>
+        <li>{{totalSells|currency:'COP':'symbol-narrow'}}</li>
+        <li>{{totalSells|currency:'EUR':'symbol-narrow'}}</li>
+        <li>{{totalSells|currency:'USD':'symbol-narrow'}}</li>
+        <li>{{totalSells|currency:'USD':'symbol-narrow':'1.4-4'}}</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Ganancia Porcentual" subheader="del presente año">
+      <ul>
+        <li>{{percent}}</li>
+        <li>{{percent|percent}}</li>
+        <li>{{percent|percent:'1.2-2'}}</li>
+      </ul>
+    </p-card>
+  </div>
+
+</div>
