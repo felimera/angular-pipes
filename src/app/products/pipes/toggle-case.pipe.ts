@@ -5,7 +5,9 @@ import { Pipe, PipeTransform } from "@angular/core";
 })
 export class ToggleCasePipe implements PipeTransform {
 
-  transform(value: string): string {
-    return value.toLocaleUpperCase();
+  transform(value: string, toUpper: boolean = false): string {
+    return (toUpper)
+      ? value.toUpperCase()
+      : value.toLowerCase();
   }
 }
